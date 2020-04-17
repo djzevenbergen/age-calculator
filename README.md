@@ -29,31 +29,19 @@ _This web application uses classes, looping, and arrays to determine a users age
     * Input: "10",  United States
     * Output: The life expectancy in United States is 78.9 years.
               You have 68.9 years left on Earth.
-              You have 287.08 years left on Mercury.
-              You have 111.13 years left on Venus.
-              You have 36.65 years left on Mars.
-              You have 5.81 years left on Jupiter.
+              You have 287.1 years left on Mercury.
+              You have 111.1 years left on Venus.
+              You have 36.7 years left on Mars.
+              You have 5.8 years left on Jupiter.
 
 * - If the user is past life expectancy, return how many years past life expectancy they've lived
     * Input: "79.9",  United States
     * Output: The life expectancy in United States is 78.54 years.
               You are 1 year over life expectancy on Earth.
-              You have 4.17 over life expectancy on Mercury.
-              You have 1.61 over life expectancy on on Venus.
-              You have .53 over life expectancy on Mars.
-              You have .08 over life expectancy on Jupiter.
-
-* - Every 2 levels of seniority increase wins 1 day off.
-    * Input: 
-    * Output:  
-
-* - If player's stress level reaches 10, the game is over because they quit their job.
-    * Input: 
-    * Output:  
-
-* - If player gains 5 days off, they win the game
-    * Input: Days Off = 5
-    * Output: Congratulations! Your manager has decided to grant you 3 days off. You decide to relax and put your resignation papers on hold.
+              You have 4.2 over life expectancy on Mercury.
+              You have 1.6 over life expectancy on on Venus.
+              You have .5 over life expectancy on Mars.
+              You have .1 over life expectancy on Jupiter.
 
 
 ## Known Bugs

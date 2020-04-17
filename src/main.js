@@ -29,6 +29,10 @@ $(document).ready(function () {
 
     console.log(yearsLeftTot);
 
+    if (yearsLeftTot[0] < 0) {
+      $(".older").removeClass("hidden");
+    }
+
     $("#user-country").text(userCountry);
     $("#user-expect").text(lifeExpect[1]);
 
