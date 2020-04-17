@@ -66,12 +66,23 @@ describe('ageCalc', function () {
   });
 
   test('determines how long the user has left to live on earth based on the user input only', function () {
+
     var lifeExpect = thisAge.findLifeExpectancy(thisAge.country);
     var howLongLeft = thisAge.timeLeftOnEarth(lifeExpect);
     expect(howLongLeft).toEqual(68.9);
 
+  });
+
+
+  test('determines how long the user has left to live on earth based on the user input only, returning a negative number if they are over the expectancy', function () {
+    thisAge.age = 90;
+    var lifeExpect = thisAge.findLifeExpectancy(thisAge.country);
+    var howLongLeft = thisAge.timeLeftOnEarth(lifeExpect);
+    expect(howLongLeft).toEqual(-11.1);
 
   });
+
+
 
   // test('determines how long the user has left to live on all planets', function() {
   //   var masterTimeLeft = thisAge

@@ -43,7 +43,7 @@ export class Age {
     let lifeExp = valuePair[1];
     let timeLeft = lifeExp - this.age;
 
-    return timeLeft;
+    return (Math.round(timeLeft * 10) / 10);
 
   }
 
