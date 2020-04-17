@@ -4,7 +4,8 @@ describe('ageCalc', function () {
   let thisAge;
 
   beforeEach(function () {
-    thisAge = new Age(10);
+    thisAge = new Age(10, "United States");
+
 
 
   });
@@ -40,6 +41,22 @@ describe('ageCalc', function () {
     var jupiterYears = thisAge.jupYears(thisAge.age);
     expect(jupiterYears).toEqual(.84);
   });
+
+
+  test('converts users country selection into a string with no spaces or capital letters', function () {
+    var convertInput = thisAge.convertInput("United States");
+    expect(convertInput).toEqual("unitedstates");
+
+  });
+  test('determines users life expectancy based on country of origin', function () {
+    var lifeExpect = thisAge.findLifeExpectancy("United States");
+    expect(lifeExpect).toEqual(["unitedstates", 78.9]);
+  })
+
+  test('determines users life expectancy based on country of origin', function () {
+    var lifeExpect = thisAge.findLifeExpectancy("HoNg KoNg");
+    expect(lifeExpect).toEqual(["hongkong", 84.7]);
+  })
 
 
 

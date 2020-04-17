@@ -27,15 +27,15 @@ _This web application uses classes, looping, and arrays to determine a users age
 
 * - Returns how many years the use has left to live on Earth, Mercury, Venus, Mars, and Jupiter based on their country of origin 
     * Input: "10",  United States
-    * Output: The life expectancy in United States is 78.54 years.
-              You have 68.54 years left on Earth.
-              You have 285.58 years left on Mercury.
-              You have 110.55 years left on Venus.
-              You have 36.46 years left on Mars.
-              You have 5.78 years left on Jupiter.
+    * Output: The life expectancy in United States is 78.9 years.
+              You have 68.9 years left on Earth.
+              You have 287.08 years left on Mercury.
+              You have 111.13 years left on Venus.
+              You have 36.65 years left on Mars.
+              You have 5.81 years left on Jupiter.
 
 * - If the user is past life expectancy, return how many years past life expectancy they've lived
-    * Input: "79.54",  United States
+    * Input: "79.9",  United States
     * Output: The life expectancy in United States is 78.54 years.
               You are 1 year over life expectancy on Earth.
               You have 4.17 over life expectancy on Mercury.
