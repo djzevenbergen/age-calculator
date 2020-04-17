@@ -25,7 +25,7 @@ _This web application uses classes, looping, and arrays to determine a users age
               Jupiter Age: .84
 
 
-* - Returns how many years the use has left to live on Earth, Mercury, Venus, Mars, and Jupiter based on their country of origin 
+* - Returns how many years the user has left to live on Earth, Mercury, Venus, Mars, and Jupiter based on their country of origin 
     * Input: "10",  United States
     * Output: The life expectancy in United States is 78.9 years.
               You have 68.9 years left on Earth.
@@ -47,10 +47,6 @@ _This web application uses classes, looping, and arrays to determine a users age
     * Input: 04-17-2010
     * Output: thisAge.age === 10
 
-
-
-## Known Bugs
-- 
 
 ## License
 
