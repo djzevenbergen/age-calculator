@@ -5,6 +5,7 @@ export class Age {
     this.birthDate = birthDate;
     this.timeLeftEarth = 0;
   }
+
   // calculates age based on birthdate
   calculateAge() {
     let today = new Date();
@@ -18,7 +19,6 @@ export class Age {
 
     this.age = age;
   }
-
 
   // converts earth years to mercury years
   mercYears(years) {
@@ -61,7 +61,6 @@ export class Age {
     return yearsAll;
   }
 
-
   //takes the country names and removes spaces and turns to lowercase to more easily search through lifeExpectancies array
   convertInput(country) {
     let countryNew = (country.replace(/\s/g, '')).toLowerCase();
@@ -75,31 +74,20 @@ export class Age {
     let time = (Math.round(timeLeft * 10) / 10);
     this.timeLeftEarth = time;
     return time;
-
   }
 
   //determines how much time the user has left on the ther planets and returns an array of those times
   timeLeftEverywhere() {
     let time = this.timeLeftEarth;
-
-    let mer = (Math.round(this.mercYears(time) * 10) / 10);
-    let ven = (Math.round(this.venYears(time) * 10) / 10);
-    let mars = (Math.round(this.marYears(time) * 10) / 10);
-    let jup = (Math.round(this.jupYears(time) * 10) / 10);
-
-    let yearsLeft = [time, mer, ven, mars, jup];
-
+    let yearsLeft = [time, (Math.round(this.mercYears(time) * 10) / 10), (Math.round(this.venYears(time) * 10) / 10), (Math.round(this.marYears(time) * 10) / 10), (Math.round(this.jupYears(time) * 10) / 10)];
     return yearsLeft;
-
   }
 
   //searches the lifeExpectancies object for the correct key value pair
   findLifeExpectancy(country) {
     let countryLower = this.convertInput(country);
     let lifeExp = lifeExpectancies[countryLower];
-
     let countryLifeExp = [countryLower, lifeExp];
-
     return countryLifeExp;
   }
 }
@@ -289,4 +277,4 @@ const lifeExpectancies = {
   yemen: 66.1,
   zambia: 63.5,
   zimbabwe: 61.2,
-}
+};
