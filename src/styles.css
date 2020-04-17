@@ -7,8 +7,8 @@ body {
 }
 
 .jumbotron {
-  color: yellow;
-  background-color: darkorange;
+  color: pink;
+  background-image: url("./../assets/images/sun.png") ;
   border: solid 10px palevioletred;
 }
 

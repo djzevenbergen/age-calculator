@@ -5,22 +5,22 @@ export class Age {
     this.birthDate = birthDate;
     this.timeLeftEarth = 0;
   }
-
+  // calculates age based on birthdate
   calculateAge() {
     let today = new Date();
     let thisBirthday = new Date(this.birthDate);
-    console.log(this.birthDate);
     let age = today.getFullYear() - thisBirthday.getFullYear();
-    console.log(today.getFullYear());
-    console.log(thisBirthday.getFullYear());
-    console.log(age);
     let m = today.getMonth() - thisBirthday.getMonth();
+
     if (m < 0 || (m === 0 && today.getDate() < thisBirthday.getDate())) {
       age--;
     }
+
     this.age = age;
   }
 
+
+  // converts earth years to mercury years
   mercYears(years) {
     const mercYears = .24;
     let newYears = years / mercYears;
@@ -28,6 +28,7 @@ export class Age {
     return newYears;
   }
 
+  // converts earth years to venus years
   venYears(years) {
     const venYears = .62;
     let newYears = years / venYears;
@@ -35,6 +36,7 @@ export class Age {
     return newYears;
   }
 
+  // converts earth years to mars years
   marYears(years) {
     const marYears = 1.88;
     let newYears = years / marYears;
@@ -43,6 +45,7 @@ export class Age {
 
   }
 
+  // converts earth years to jupiter years
   jupYears(years) {
     const jupYears = 11.86;
     let newYears = years / jupYears;
@@ -51,22 +54,22 @@ export class Age {
 
   }
 
-
+  // compiles the ages from all of the planets into an array
   ageEverywhere() {
     let thisAge = this.age;
-
     let yearsAll = [thisAge, (Math.round(this.mercYears(thisAge) * 10) / 10), (Math.round(this.venYears(thisAge) * 10) / 10), (Math.round(this.marYears(thisAge) * 10) / 10), (Math.round(this.jupYears(thisAge) * 10) / 10)];
-
     return yearsAll;
-
   }
+
+
+  //takes the country names and removes spaces and turns to lowercase to more easily search through lifeExpectancies array
   convertInput(country) {
     let countryNew = (country.replace(/\s/g, '')).toLowerCase();
     return countryNew;
   }
 
+  //determines how much time the user has left on earth
   timeLeftOnEarth(valuePair) {
-    console.log(valuePair);
     let lifeExp = valuePair[1];
     let timeLeft = lifeExp - this.age;
     let time = (Math.round(timeLeft * 10) / 10);
@@ -75,8 +78,7 @@ export class Age {
 
   }
 
-
-
+  //determines how much time the user has left on the ther planets and returns an array of those times
   timeLeftEverywhere() {
     let time = this.timeLeftEarth;
 
@@ -89,10 +91,9 @@ export class Age {
 
     return yearsLeft;
 
-
   }
 
-
+  //searches the lifeExpectancies object for the correct key value pair
   findLifeExpectancy(country) {
     let countryLower = this.convertInput(country);
     let lifeExp = lifeExpectancies[countryLower];

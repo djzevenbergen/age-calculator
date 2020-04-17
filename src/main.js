@@ -11,14 +11,9 @@ $(document).ready(function () {
     event.preventDefault();
     let userBirthday = $("#birthdayForm").val();
     let userCountry = $("#country").val();
-
-
-
     let thisAge = new Age(userCountry, userBirthday);
 
     thisAge.calculateAge();
-
-    console.log(thisAge.age);
 
     let alienAge = thisAge.ageEverywhere();
 
@@ -29,6 +24,7 @@ $(document).ready(function () {
     $("#jupiter-age").text(alienAge[4]);
 
     thisAge.timeLeftOnEarth(thisAge.findLifeExpectancy(thisAge.country));
+
     let lifeExpect = thisAge.findLifeExpectancy(thisAge.country);
     let yearsLeftTot = thisAge.timeLeftEverywhere();
 

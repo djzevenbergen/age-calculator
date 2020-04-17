@@ -43,14 +43,14 @@ _This web application uses classes, looping, and arrays to determine a users age
               You have .5 over life expectancy on Mars.
               You have .1 over life expectancy on Jupiter.
 
+* - Calculates the user's age based on their birthday
+    * Input: 04-17-2010
+    * Output: thisAge.age === 10
+
+
 
 ## Known Bugs
 - 
-
-
-## Access to Website
-
-_https://djzevenbergen.github.io/age-calculator_
 
 ## License
 
