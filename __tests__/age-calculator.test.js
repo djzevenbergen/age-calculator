@@ -58,6 +58,25 @@ describe('ageCalc', function () {
     expect(lifeExpect).toEqual(["hongkong", 84.7]);
   })
 
+  test('determines how long the user has left to live on earth based on key value pair', function () {
+    var howLongLeft = thisAge.timeLeftOnEarth(["unitedstates", 78.9]);
+    expect(howLongLeft).toEqual(68.9);
+
+
+  });
+
+  test('determines how long the user has left to live on earth based on the user input only', function () {
+    var lifeExpect = thisAge.findLifeExpectancy(thisAge.country);
+    var howLongLeft = thisAge.timeLeftOnEarth(lifeExpect);
+    expect(howLongLeft).toEqual(68.9);
+
+
+  });
+
+  // test('determines how long the user has left to live on all planets', function() {
+  //   var masterTimeLeft = thisAge
+  // })
+
 
 
 

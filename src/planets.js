@@ -39,6 +39,13 @@ export class Age {
     return countryNew;
   }
 
+  timeLeftOnEarth(valuePair) {
+    let lifeExp = valuePair[1];
+    let timeLeft = lifeExp - this.age;
+
+    return timeLeft;
+
+  }
 
 
   findLifeExpectancy(country) {
