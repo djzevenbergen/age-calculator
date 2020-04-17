@@ -23,22 +23,22 @@ describe('ageCalc', function () {
 
   test('verifies that calculate mercYears returns the users age in mercury years', function () {
     var mercuryYears = thisAge.mercYears(thisAge.age);
-    expect(mercuryYears).toEqual(41.67);
+    expect(mercuryYears).toEqual(10);//41.67);
   });
 
   test('verifies that venYears returns the users age in venus years', function () {
-    var venusYears = thisAge.venYears;
-    expect(venusYears).toEqual(16.13);
+    var venusYears = thisAge.venYears(thisAge.age);
+    expect(venusYears).toEqual(10);//(16.13);
   });
 
   test('verifies that marYears returns the users age in Mars years', function () {
-    var marsYears = thisAge.marYears;
-    expect(marsYears).toEqual(5.32);
+    var marsYears = thisAge.marYears(thisAge.age);
+    expect(marsYears).toEqual(10);//(5.32);
   });
 
-  test('verifies that venYears returns the users age in venus years', function () {
-    var jupiterYears = thisAge.jupYears;
-    expect(jupiterYears).toEqual(.84);
+  test('verifies that jupYears returns the users age in jupiter years', function () {
+    var jupiterYears = thisAge.jupYears(thisAge.age);
+    expect(jupiterYears).toEqual(10);//(.84);
   });
 
 
