@@ -27,11 +27,16 @@ $(document).ready(function () {
     let lifeExpect = thisAge.findLifeExpectancy(thisAge.country);
     let yearsLeftTot = thisAge.timeLeftEverywhere();
 
-    console.log(yearsLeftTot);
-
     if (yearsLeftTot[0] < 0) {
       $(".older").removeClass("hidden");
+      $(".younger").addClass("hidden");
+      yearsLeftTot = yearsLeftTot.map(x => x * -1);
+    } else {
+      $(".younger").removeClass("hidden");
+      $(".older").addClass("hidden");
     }
+
+    console.log(yearsLeftTot);
 
     $("#user-country").text(userCountry);
     $("#user-expect").text(lifeExpect[1]);
@@ -41,6 +46,8 @@ $(document).ready(function () {
     $("#venus-time").text(yearsLeftTot[2]);
     $("#mars-time").text(yearsLeftTot[3]);
     $("#jupiter-time").text(yearsLeftTot[4]);
+
+    $(".row").removeClass("hidden");
 
   });
 
