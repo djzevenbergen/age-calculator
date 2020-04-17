@@ -82,6 +82,35 @@ describe('ageCalc', function () {
 
   });
 
+  // You have 68.9 years left on Earth.
+  // You have 287.08 years left on Mercury.
+  // You have 111.13 years left on Venus.
+  // You have 36.65 years left on Mars.
+  // You have 5.81 years left on Jupiter.
+
+
+  test('determines how many years left to live on all planets, returning an array', function () {
+    thisAge.timeLeftOnEarth(thisAge.findLifeExpectancy(thisAge.country));
+    expect(thisAge.timeLeftEverywhere()).toEqual([68.9, 287.1, 111.1, 36.7, 5.8]);
+
+
+  });
+
+  // You are 1 year over life expectancy on Earth.
+  // You have 4.17 over life expectancy on Mercury.
+  // You have 1.61 over life expectancy on on Venus.
+  // You have .53 over life expectancy on Mars.
+  // You have .08 over life expectancy on Jupiter.
+
+  test('determines how many years lived past life expectancy, returning an array', function () {
+    thisAge.age = 79.9;
+
+    thisAge.timeLeftOnEarth(thisAge.findLifeExpectancy(thisAge.country));
+    expect(thisAge.timeLeftEverywhere()).toEqual([-1, -4.2, -1.6, -.5, -.1]);
+
+
+  });
+
 
 
   // test('determines how long the user has left to live on all planets', function() {

@@ -2,6 +2,7 @@ export class Age {
   constructor(age, country) {
     this.age = age;
     this.country = country;
+    this.timeLeftEarth = 0;
   }
 
   mercYears(years) {
@@ -42,8 +43,25 @@ export class Age {
   timeLeftOnEarth(valuePair) {
     let lifeExp = valuePair[1];
     let timeLeft = lifeExp - this.age;
+    let time = (Math.round(timeLeft * 10) / 10);
+    this.timeLeftEarth = time;
+    return time;
 
-    return (Math.round(timeLeft * 10) / 10);
+  }
+
+
+  timeLeftEverywhere() {
+    let time = this.timeLeftEarth;
+
+    let mer = (Math.round(this.mercYears(time) * 10) / 10);
+    let ven = (Math.round(this.venYears(time) * 10) / 10);
+    let mars = (Math.round(this.marYears(time) * 10) / 10);
+    let jup = (Math.round(this.jupYears(time) * 10) / 10);
+
+    let yearsLeft = [time, mer, ven, mars, jup];
+
+    return yearsLeft;
+
 
   }
 
