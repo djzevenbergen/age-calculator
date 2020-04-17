@@ -101,11 +101,7 @@ export class Age {
     let countryLifeExp = [countryLower, lifeExp];
 
     return countryLifeExp;
-
   }
-
-
-  //( Math.floor(num * 100) / 100 )
 }
 
 const lifeExpectancies = {
