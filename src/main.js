@@ -9,11 +9,16 @@ $(document).ready(function () {
 
   $("#formOne").submit(function (event) {
     event.preventDefault();
-    var userAge = parseInt($("#ageForm").val());
-    var userCountry = $("#country").val();
+    let userBirthday = $("#birthdayForm").val();
+    let userCountry = $("#country").val();
 
-    var thisAge = new Age(userAge, userCountry);
 
+
+    let thisAge = new Age(userCountry, userBirthday);
+
+    thisAge.calculateAge();
+
+    console.log(thisAge.age);
 
     let alienAge = thisAge.ageEverywhere();
 
@@ -35,8 +40,6 @@ $(document).ready(function () {
       $(".younger").removeClass("hidden");
       $(".older").addClass("hidden");
     }
-
-    console.log(yearsLeftTot);
 
     $("#user-country").text(userCountry);
     $("#user-expect").text(lifeExpect[1]);

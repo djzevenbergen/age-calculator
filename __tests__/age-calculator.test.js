@@ -2,12 +2,18 @@ import { Age } from './../src/planets.js';
 
 describe('ageCalc', function () {
   let thisAge;
-
+  let birthDate;
   beforeEach(function () {
-    thisAge = new Age(10, "United States");
+    birthDate = '2010-04-17'
+    thisAge = new Age("United States", birthDate);
+    thisAge.calculateAge();
 
 
 
+  });
+
+  test('calculates users age based on birthday', function () {
+    expect(thisAge.age).toEqual(10);
   });
 
   test('verifies that the Age object is created with the correct age property', function () {
@@ -87,12 +93,6 @@ describe('ageCalc', function () {
 
   });
 
-  // You have 68.9 years left on Earth.
-  // You have 287.08 years left on Mercury.
-  // You have 111.13 years left on Venus.
-  // You have 36.65 years left on Mars.
-  // You have 5.81 years left on Jupiter.
-
 
   test('determines how many years left to live on all planets, returning an array', function () {
     thisAge.timeLeftOnEarth(thisAge.findLifeExpectancy(thisAge.country));
@@ -100,12 +100,6 @@ describe('ageCalc', function () {
 
 
   });
-
-  // You are 1 year over life expectancy on Earth.
-  // You have 4.17 over life expectancy on Mercury.
-  // You have 1.61 over life expectancy on on Venus.
-  // You have .53 over life expectancy on Mars.
-  // You have .08 over life expectancy on Jupiter.
 
   test('determines how many years lived past life expectancy, returning an array', function () {
     thisAge.age = 79.9;
@@ -115,12 +109,6 @@ describe('ageCalc', function () {
 
 
   });
-
-
-
-  // test('determines how long the user has left to live on all planets', function() {
-  //   var masterTimeLeft = thisAge
-  // })
 
 
 

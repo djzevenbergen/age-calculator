@@ -1,8 +1,24 @@
 export class Age {
-  constructor(age, country) {
-    this.age = age;
+  constructor(country, birthDate) {
+    this.age = 0;
     this.country = country;
+    this.birthDate = birthDate;
     this.timeLeftEarth = 0;
+  }
+
+  calculateAge() {
+    let today = new Date();
+    let thisBirthday = new Date(this.birthDate);
+    console.log(this.birthDate);
+    let age = today.getFullYear() - thisBirthday.getFullYear();
+    console.log(today.getFullYear());
+    console.log(thisBirthday.getFullYear());
+    console.log(age);
+    let m = today.getMonth() - thisBirthday.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < thisBirthday.getDate())) {
+      age--;
+    }
+    this.age = age;
   }
 
   mercYears(years) {
@@ -55,7 +71,6 @@ export class Age {
     let timeLeft = lifeExp - this.age;
     let time = (Math.round(timeLeft * 10) / 10);
     this.timeLeftEarth = time;
-    console.log(time);
     return time;
 
   }
