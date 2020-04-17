@@ -16,10 +16,6 @@ describe('ageCalc', function () {
   });
 
 
-  // * Output: Mercury Age: 41.67
-  // Venus Age: 16.13
-  // Mars Age: 5.32
-  // Jupiter Age: .84
 
 
   test('verifies that calculate mercYears returns the users age in mercury years', function () {
@@ -42,6 +38,15 @@ describe('ageCalc', function () {
     expect(jupiterYears).toEqual(.84);
   });
 
+  // * Output: Mercury Age: 41.67
+  // Venus Age: 16.13
+  // Mars Age: 5.32
+  // Jupiter Age: .84
+
+
+  test('verifies that ageEverywher creates an array of all ages from all planets', function () {
+    expect(thisAge.ageEverywhere()).toEqual([10, 41.7, 16.1, 5.3, .8])
+  });
 
   test('converts users country selection into a string with no spaces or capital letters', function () {
     var convertInput = thisAge.convertInput("United States");

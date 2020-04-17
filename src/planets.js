@@ -35,19 +35,31 @@ export class Age {
 
   }
 
+
+  ageEverywhere() {
+    let thisAge = this.age;
+
+    let yearsAll = [thisAge, (Math.round(this.mercYears(thisAge) * 10) / 10), (Math.round(this.venYears(thisAge) * 10) / 10), (Math.round(this.marYears(thisAge) * 10) / 10), (Math.round(this.jupYears(thisAge) * 10) / 10)];
+
+    return yearsAll;
+
+  }
   convertInput(country) {
     let countryNew = (country.replace(/\s/g, '')).toLowerCase();
     return countryNew;
   }
 
   timeLeftOnEarth(valuePair) {
+    console.log(valuePair);
     let lifeExp = valuePair[1];
     let timeLeft = lifeExp - this.age;
     let time = (Math.round(timeLeft * 10) / 10);
     this.timeLeftEarth = time;
+    console.log(time);
     return time;
 
   }
+
 
 
   timeLeftEverywhere() {
