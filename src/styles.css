@@ -1,3 +1,26 @@
 .hidden {
   display: none;
 }
+
+body {
+  background-color: lightpink;
+}
+
+.jumbotron {
+  color: yellow;
+  background-color: darkorange;
+  border: solid 10px palevioletred;
+}
+
+.card {
+  color:whitesmoke;
+  background-color: darkblue;
+}
+
+.card-header {
+  background-image: url("./../assets/images/mtn.png") ;
+}
+
+.form-style {
+  background-color: yellow ;
+}
