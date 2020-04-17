@@ -9,8 +9,12 @@ describe('ageCalc', function () {
 
   });
 
-  test('verifie that the Age object is created with the correct age property', function () {
+  test('verifies that the Age object is created with the correct age property', function () {
     expect(thisAge.age).toEqual(10);
+
+  });
+
+  test('verifies that calculate mercYears returns the users in mercury years', function () {
 
   });
 
