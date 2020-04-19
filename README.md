@@ -48,6 +48,9 @@ _This web application uses classes, looping, and arrays to determine a users age
     * Output: thisAge.age === 10
 
 
+## Known Bugs
+* If you're on a windows machine, you should replace line 8 of the package.json file with: "start": "npm run build & webpack-dev-server --open --mode development"
+
 ## License
 
 Copyright © 2020
