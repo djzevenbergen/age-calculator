@@ -20,22 +20,22 @@ describe('ageCalc', function () {
   });
 
   test('verifies that calculate mercYears returns the users age in mercury years', function () {
-    var mercuryYears = thisAge.mercYears(thisAge.age);
+    let mercuryYears = thisAge.mercYears(thisAge.age);
     expect(mercuryYears).toEqual(41.67);
   });
 
   test('verifies that venYears returns the users age in venus years', function () {
-    var venusYears = thisAge.venYears(thisAge.age);
+    let venusYears = thisAge.venYears(thisAge.age);
     expect(venusYears).toEqual(16.13);
   });
 
   test('verifies that marYears returns the users age in Mars years', function () {
-    var marsYears = thisAge.marYears(thisAge.age);
+    let marsYears = thisAge.marYears(thisAge.age);
     expect(marsYears).toEqual(5.32);
   });
 
   test('verifies that jupYears returns the users age in jupiter years', function () {
-    var jupiterYears = thisAge.jupYears(thisAge.age);
+    let jupiterYears = thisAge.jupYears(thisAge.age);
     expect(jupiterYears).toEqual(.84);
   });
 
@@ -44,35 +44,35 @@ describe('ageCalc', function () {
   });
 
   test('converts users country selection into a string with no spaces or capital letters', function () {
-    var convertInput = thisAge.convertInput("United States");
+    let convertInput = thisAge.convertInput("United States");
     expect(convertInput).toEqual("unitedstates");
   });
 
   test('determines users life expectancy based on country of origin', function () {
-    var lifeExpect = thisAge.findLifeExpectancy("United States");
+    let lifeExpect = thisAge.findLifeExpectancy("United States");
     expect(lifeExpect).toEqual(["unitedstates", 78.9]);
   });
 
   test('determines users life expectancy based on country of origin', function () {
-    var lifeExpect = thisAge.findLifeExpectancy("HoNg KoNg");
+    let lifeExpect = thisAge.findLifeExpectancy("HoNg KoNg");
     expect(lifeExpect).toEqual(["hongkong", 84.7]);
   });
 
   test('determines how long the user has left to live on earth based on key value pair', function () {
-    var howLongLeft = thisAge.timeLeftOnEarth(["unitedstates", 78.9]);
+    let howLongLeft = thisAge.timeLeftOnEarth(["unitedstates", 78.9]);
     expect(howLongLeft).toEqual(68.9);
   });
 
   test('determines how long the user has left to live on earth based on the user input only', function () {
-    var lifeExpect = thisAge.findLifeExpectancy(thisAge.country);
-    var howLongLeft = thisAge.timeLeftOnEarth(lifeExpect);
+    let lifeExpect = thisAge.findLifeExpectancy(thisAge.country);
+    let howLongLeft = thisAge.timeLeftOnEarth(lifeExpect);
     expect(howLongLeft).toEqual(68.9);
   });
 
   test('determines how long the user has left to live on earth based on the user input only, returning a negative number if they are over the expectancy', function () {
     thisAge.age = 90;
-    var lifeExpect = thisAge.findLifeExpectancy(thisAge.country);
-    var howLongLeft = thisAge.timeLeftOnEarth(lifeExpect);
+    let lifeExpect = thisAge.findLifeExpectancy(thisAge.country);
+    let howLongLeft = thisAge.timeLeftOnEarth(lifeExpect);
     expect(howLongLeft).toEqual(-11.1);
   });
 
